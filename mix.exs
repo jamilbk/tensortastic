@@ -3,7 +3,7 @@ defmodule Tensortastic.Mixfile do
 
   def project do
     [app: :tensortastic,
-     version: "0.0.0",
+     version: "0.0.1-prealpha",
      compilers: [:elixir_make] ++ Mix.compilers,
      elixir: "~> 1.3",
      description: "Experimental Tensorflow bindings for Elixir",
