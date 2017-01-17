@@ -12,7 +12,7 @@ defmodule Tensortastic do
     :ok = :erlang.load_nif(path, 0)
   end
 
-  def session do
-    raise "NIF session/0 not implemented"
+  def tf_version do
+    raise "NIF tf_version/0 not implemented"
   end
 end

@@ -3,6 +3,7 @@ CFLAGS = -g -O3 -Wall
 ERLANG_PATH = $(shell erl -eval 'io:format("~s", [lists:concat([code:root_dir(), "/erts-", erlang:system_info(version), "/include"])])' -s init stop -noshell)
 CFLAGS += -I$(ERLANG_PATH)
 CFLAGS += -Ic_src
+LDFLAGS += -ltensorflow -Lpriv
 
 LIB_NAME = priv/tensortastic_nif.so
 ifneq ($(CROSSCOMPILE),)
@@ -20,7 +21,7 @@ else
 endif
 
 NIF_SRC=\
-	src/tensortastic_nif.c
+	c_src/tensortastic_nif.c
 
 all: $(LIB_NAME)
 
@@ -30,5 +31,6 @@ $(LIB_NAME): $(NIF_SRC)
 
 clean:
 	rm -f $(LIB_NAME)
+	rm -rf _build
 
 .PHONY: all clean

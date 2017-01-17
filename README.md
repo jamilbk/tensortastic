@@ -2,10 +2,14 @@
 
 **Experimental Tensorflow bindings for Elixir**
 
-Disclaimer: This project is not yet meant to be used and serves primarily as a
-learning exercise for Tensorflow and Elixir.
+Disclaimer: This project is a WIP and nothing but `TF_Version()` is implemented
+yet.
 
 ## Installation
+
+Requirements:
+1. A built libtensorflow.so 0.12.1 for your platform must be in `priv/`.
+Building tensorflow is not covered here.
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
@@ -13,7 +17,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
     ```elixir
     def deps do
-      [{:tensortastic, "~> 0.1.0"}]
+      [{:tensortastic, "~> 0.0.1-prealpha"}]
     end
     ```
 
@@ -24,4 +28,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
       [applications: [:tensortastic]]
     end
     ```
-

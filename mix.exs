@@ -24,7 +24,7 @@ defmodule Tensortastic.Mixfile do
     [ name: :tensortastic,
       files: ["lib", "mix.exs"],
       maintainers: ["Jamil Bou Kheir"],
-      licenses: ["MIT"],
+      licenses: ["Apache 2.0"],
       links: %{"Github" => "https://github.com/jamilbk/tensortastic"},
     ]
   end
