@@ -22,4 +22,18 @@ defmodule Tensortastic do
   def tf_version do
     raise "NIF tf_version/0 not implemented"
   end
+
+  @doc """
+  Returns a new Graph
+  """
+  def new_graph do
+    raise "NIF new_graph/0 not implemented"
+  end
+
+  @doc """
+  Returns a new Session
+  """
+  def new_session do
+    raise "NIF new_session/0 not implemented"
+  end
 end

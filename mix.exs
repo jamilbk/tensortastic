@@ -3,7 +3,8 @@ defmodule Tensortastic.Mixfile do
 
   def project do
     [app: :tensortastic,
-     version: "0.0.2-prealpha",
+     version: "0.0.3",
+     make_env: %{"LIBTENSORFLOW_PATH" => System.get_env("LIBTENSORFLOW_PATH")},
      compilers: [:elixir_make] ++ Mix.compilers,
      elixir: "~> 1.3",
      description: "Experimental Tensorflow bindings for Elixir",
@@ -40,7 +41,7 @@ defmodule Tensortastic.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:elixir_make, "~> 0.4"},
+      {:elixir_make, "~> 0.4", runtime: false},
       {:earmark, ">= 0.0.0", only: :dev},
       {:ex_doc, ">= 0.0.0", only: :dev},
     ]

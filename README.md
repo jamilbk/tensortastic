@@ -2,26 +2,29 @@
 
 **Experimental Tensorflow bindings for Elixir**
 
-Disclaimer: This project is a WIP and nothing but `TF_Version()` is implemented
-yet.
+Disclaimer: This is pre-alpha software and many parts are not functional. It's
+highly recommended you do not use this in a production environment.
 
 ## Installation
 
-Requirements:
-1. A built libtensorflow.so 0.12.1 for your platform must be in `priv/`.
-Building tensorflow is not covered here.
+Steps:
+  1. Set LIBTENSORFLOW_PATH to the location containing libtensorflow.so version
+    0.12.1. Building tensorflow is not covered here:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+		```shell
+		$ export LIBTENSORFLOW_PATH=/usr/lib
+		```
 
-  1. Add `tensortastic` to your list of dependencies in `mix.exs`:
+  2. Add `tensortastic` to your list of dependencies in `mix.exs`:
 
     ```elixir
     def deps do
-      [{:tensortastic, "~> 0.0.1-prealpha"}]
+      [{:tensortastic, "~> 0.0.3"}]
     end
     ```
 
-  2. Ensure `tensortastic` is started before your application:
+  3. Run `mix deps.get`
+  4. Ensure `tensortastic` is started before your application:
 
     ```elixir
     def application do
